@@ -1,0 +1,21 @@
+/* 2022-10-12 11:30 author by zjc02 */
+
+/*这是整个页面的大小和样式*/
+.container{height:600px;width:900px;}
+
+/*最上面部分样式*/
+.top{height:50px;width:800px;float:left;background-color:blue}
+.head-image{height:50px;width:50px;float:left;}
+.top-right-username{height:50px;width:50px;float:right;background-color:red}
+
+/*左侧菜单样式*/
+.left-menu{height:550px;width:100px;float:left;background-color:orange}
+ul{float:left;list-style-type:none;}
+.menu-img{height:40px;width:40px;}
+.menu-text{font-size:15px;}
+
+/*内容部分样式*/
+.content{height:530px;width:780px;float:right;background-color:#EEE;border-style:solid;border-width:10px;border-color:#98bf21;}
+label{float:left;font-size:1em;}
+table{border:0;width:780px}
+

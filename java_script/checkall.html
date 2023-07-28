@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>checkall</title>
+    <script src="checkall.js"></script>
+</head>
+
+<body>
+看书：<input type="checkbox" name="checkbox" value=1><br>
+写字：<input type="checkbox" name="checkbox" value=2><br>
+打飞机：<input type="checkbox" name="checkbox" value=3><br>
+玩游戏：<input type="checkbox" name="checkbox" value=4><br>
+<!--方法一：-->
+<button onclick="allCheck()">全选/取消</button>
+
+<!--方法二：-->
+<!--<button onclick="check_boxed('checkbox')">全选</button>-->
+<!--<button onclick="uncheck_boxed('checkbox')">取消全选</button>-->
+
+<!--方法四：-->
+<!--看书：<input type="checkbox" name="checkbox" value=1><br>-->
+<!--写字：<input type="checkbox" name="checkbox"value=2><br>-->
+<!--打飞机：<input type="checkbox" name="checkbox"value=3><br>-->
+<!--玩游戏：<input type="checkbox" name="checkbox"value=4><br>-->
+<!--<input type="button" value="全选" onclick="allcheck(this)">-->
+<!--<script>-->
+<!--var checkAll = false;-->
+<!--function allcheck(element){-->
+<!--    checkAll = !checkAll;-->
+<!--    element.value=checkAll?"全不选":"全选";-->
+<!--    let inputs = document.getElementsByName('checkbox')-->
+<!--    for( var index in inputs){-->
+<!--        inputs[index].checked = checkAll;-->
+<!--    }-->
+<!--}-->
+<!--</script>-->
+
+</body>
+</html>

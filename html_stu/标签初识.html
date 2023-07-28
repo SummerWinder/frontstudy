@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>图片使用方法和字体大小</title>
+
+</head>
+<body>
+<h1>
+<span style="font-size: x-large; "><b>标签一：标签有单体标签和成对标签的分别，大部分标签是成对出现的，少数标签是单体的，比如图像标签</b>这是6号字体</span>
+</h1>
+<br/>
+<h2>
+<b>开始标签和结束标签之间的部分叫做元素</b>
+    </h2>
+<br/>
+
+<b>头部标签内部的内容称为属性</b>
+<br/>
+
+所有标签缩写的全称：
+<br/>
+<!--<b>-&#45;&#45;bold-->
+
+<!--<em>-&#45;&#45;emphasize-->
+
+<!--<i>-&#45;&#45;italic-->
+
+<!--<sub>-&#45;&#45;subscript-->
+
+<!--<sup>-&#45;&#45;superscript-->
+
+<!--<ins>-&#45;&#45;insert-->
+
+<!--<del>-&#45;&#45;delete-->
+
+<!--<kbd>-&#45;&#45;keyboard-->
+
+<!--<bdo>-&#45;&#45;Bi-Directional Override-->
+
+<!--<q>-&#45;&#45;quote-->
+
+<!--<dfn>-&#45;&#45;define-->
+
+<img src="/images/logo.png" width="258" height="39" />
+<br/>
+<img src="1617868100173_WechatIMG11.jpeg" width="55" height="39" />
+<br/>
+</body>
+</html>
+
+
+<!--1、*.html 文件跟 *.jpg 文件(f盘)在不同目录下：-->
+<img src="file:///f:/*.jpg" width="30" height="12"/>
+
+<!--2、*.html 文件跟 *.jpg 图片在相同目录下：-->
+<img src="*.jpg" width="300" height="120"/>
+
+<!--3、*.html 文件跟 *.jpg 图片在不同目录下：-->
+<!--a、图片 *.jpg 在 image 文件夹中，*.html 跟 image 在同一目录下：-->
+<img src="image/*.jpg/"width="300" height="120"/>
+
+<!--b、图片 *.jpg 在 image 文件夹中，*.html 在 connage 文件夹中，image 跟 connage 在同一目录下：-->
+<img src="../image/*.jpg/"width="300" height="120"/>
+
+<!--4、如果图片来源于网络，那么写绝对路径：-->
+<img src="http://static.runoob.com/images/runoob-logo.png" width="300" height="120"/>
+
+
+<!--HTML 中 href、src 区别-->
+<!--href 是 Hypertext Reference 的缩写，表示超文本引用。用来建立当前元素和文档之间的链接。常用的有：link、a。例如：-->
+<link href="reset.css" rel=”stylesheet“/>
+
+<!--浏览器会识别该文档为 css 文档，并行下载该文档，并且不会停止对当前文档的处理。这也是建议使用 link，而不采用 @import 加载 css 的原因。 src 是 source 的缩写，src 的内容是页面必不可少的一部分，是引入。src 指向的内容会嵌入到文档中当前标签所在的位置。常用的有：img、script、iframe。例如:-->
+
+<script src="script.js"></script>
+
+<!--当浏览器解析到该元素时，会暂停浏览器的渲染，直到该资源加载完毕。这也是将js脚本放在底部而不是头部得原因。-->
+<!--简而言之，src 用于替换当前元素；href 用于在当前文档和引用资源之间建立联系。-->
+
+
+
+<span style="font-size: x-large; ">这是6号字体文本</span>
+
+<h2>这是2号标题</h2>
+<span style="font-size: large; ">这是5号字体文本</span>
+
+<h3>这是3号标题</h3>
+<span style="font-size: medium; ">这是4号字体文本</span>
+
+<h4>这是4号标题</h4>
+<span style="font-size: small; ">这是3号字体文本</span>
+
+<h5>这是5号标题</h5>
+<span style="font-size: x-small; ">这是2号字体文本</span>
+
+<h6>这是6号标题</h6>
+<span style="font-size: xx-small; ">这是1号字体文本</span>
