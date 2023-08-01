@@ -4,15 +4,15 @@
 .container{height:1000px;width:1500px;}
 
 /*最上面部分样式*/
-.top{height:50px;width:1350px;float:left;background-color:#C0C0C0}
-.head-image{height:30px;width:150px;float:left;}
-.top-right-username{height:20px;width:150px;float:right;background-color:red}
+.top{height:50px;width:1450px;float:left;background-color:#C0C0C0}
+.head-image{height:30px;width:50px;float:left;}
+.top-right-username{height:20px;width:50px;float:left;background-color:red}
 
 /*左侧菜单样式*/
 .left-menu{height:950px;width:100px;float:left;background-color:orange}
 ul{float:left;list-style-type:none;}
-.menu-img{float:left;height:40px;width:30px;}
-.menu-text{float:left;font-size:15px;}
+.menu-img{float:left;height:20px;width:20px;}
+a{float:left;font-size:15px;}
 
 /*内容部分样式*/
 .content{height:950px;width:1380px;float:right;background-color:#EEE;border-style:solid;border-width:10px;border-color:#98bf21;}
