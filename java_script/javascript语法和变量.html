@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>语法和变量</title>
+</head>
+<body>
+<button onclick="test()">输出日志</button>
+<script>
+/*
+数组（Array）字面量 定义一个数组：
+[40, 100, 1, 5, 25, 10]
+
+对象（Object）字面量 定义一个对象：
+{firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"}
+
+函数（Function）字面量 定义一个函数：
+function myFunction(a, b) { return a * b;}
+*/
+
+/*
+//在 JavaScript 中，使用 var 关键字声明变量时，变量会被限制在当前的执行环境中;
+//省略 var 关键字声明变量，则会将该变量定义为全局变量;
+function test() {
+  var x = 10;
+  console.log(x);  // 10
+}
+<!--console.log(x);  // undefined-->
+*/
+
+function test() {
+  x = 10;
+  console.log(x);  // 10
+}
+test(); //想要在函数外部使用全局变量，需要先调用方法才能使用
+console.log(x);  // undefined
+
+/*
+变量必须以字母开头
+变量也能以 $ 和 _ 符号开头（不过我们不推荐这么做）
+变量名称对大小写敏感（y 和 Y 是不同的变量）
+
+一条语句，多个变量
+var lastname="Doe", age=30, job="carpenter";
+在计算机程序中，经常会声明无值的变量。未使用值来声明的变量，其值实际上是 undefined。
+
+const 关键字用来声明 JavaScript中的常量（与变量相对，不可修改，但同样是用于存储信息的"容器"。），常量的值不能通过重新赋值来改变，并且不能重新声明
+*/
+</script>
+</body>
+</html>

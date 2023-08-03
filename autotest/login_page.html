@@ -4,24 +4,35 @@
     <meta charset="UTF-8" name=”viewport” content=”width=device-width>
     <title>自动化平台欢迎您</title>
     <style>
-        .container{
+        .box{
         display:flex;
         justify-content:center;
         align-items:center;
+        height:600px;
+        width:1500px;
+        }
+        .do_login{
+        float:right;
+        }
+        .forget_password
+        {
+        float:left;
         }
     </style>
 </head>
 <body>
-    <form class="container">
-        <label>用户名:
-         <input placeholder="请输入"><br/>
-        </label>
-        <label>密码:
-         <input placeholder="请输入"><br/>
-        </label>
-        <button >登录
-            <button>忘记密码</button>
-        </button>
-    </form>
+    <div class="box">
+        <form class="content">
+            <h1 style="color:#6495ED;">请先登录</h1>
+            <label class="username">用户名:
+             <input placeholder="请输入">
+            </label><br><br>
+            <label class="password">密&nbsp;&nbsp;&nbsp;码:
+             <input placeholder="请输入">
+            </label><br><br>
+            <button class="forget_password">忘记密码</button>
+            <button class="do_login">登录</button>
+        </form>
+    </div>
 </body>
 </html>

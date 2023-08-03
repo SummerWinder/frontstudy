@@ -1,0 +1,76 @@
+<!--2023/8/3-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name=”viewport” content=”width=device-width>
+    <title>自动化平台欢迎您</title>
+    <style>
+        .box{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        height:600px;
+        width:1500px;
+        }
+        .do_login{
+        float:right;
+        }
+        .forget_password
+        {
+        float:left;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box">
+        <form class="content">
+            <h1 style="color:#6495ED;">请先登录</h1>
+            <label class="username">用户名:
+             <input placeholder="请输入">
+            </label><br><br>
+            <label class="password">密&nbsp;&nbsp;&nbsp;码:
+             <input placeholder="请输入">
+            </label><br><br>
+            <button class="forget_password" onclick="myFunction()">忘记密码</button>
+            <button class="do_login">登录</button><br><br>
+            <p id="bottom_text">这是最后的一段文字</p>
+            <script>
+/*
+脚本位置
+在 <head> 或者 <body> 的JavaScript
+外部脚本不能包含 <script> 标签。
+
+输出数据
+window.alert() 弹出警告框。
+document.write() 方法将内容写到 HTML 文档中。
+innerHTML 写入到 HTML 元素。
+console.log() 写入到浏览器的控制台。
+
+输出内容
+使用 document.write() 向文档输出写内容。
+如果在文档已完成加载后执行 document.write，整个 HTML 页面将被覆盖
+
+写到控制台(调试模式)
+使用 console.log() 方法在浏览器中显示 JavaScript 值。
+F12 启用调试模式， 在调试窗口中点击 "Console" 菜单。
+*/
+
+<!--/*-->
+<!--                浏览器中弹框输出-->
+                window.alert( 1+2 );
+<!--                修改p标签中的文字内容-->
+                document.getElementById("bottom_text").innerHTML  = "重新修改过的底部文字是这个";
+<!--                点击忘记密码按钮，调用写入时间方法，替换页面内容为时间-->
+                function myFunction() {
+                    document.write(Date());
+                }
+<!--                将日志内容写到调试控制台-->
+                console.log(111122222);
+<!--*/-->
+
+            </script>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据类型</title>
+</head>
+<body>
+<script>
+/*
+    JavaScript 数组---和python中的列表一样
+    下面的代码创建名为 cars 的数组：
+    var cars=new Array();
+    cars[0]="Saab";
+    cars[1]="Volvo";
+    cars[2]="BMW";
+
+    或者 (condensed array):
+    var cars=new Array("Saab","Volvo","BMW");
+
+    或者 (literal array):
+    var cars=["Saab","Volvo","BMW"];
+*/
+
+<!--    利用 toString() 方法可以把数值转换为字符串。-->
+    var a=100;
+    var c=a.toString();
+    console.log(typeof(c));      //typeof()方法验证转换后的数据类型
+<!--    使用 parseInt() 和 parseFloat() 方法可以把字符串转换为数值。-->
+    var str="123.30";
+    var a=parseInt(str);    //parseInt()方法把字符串转换为整数，parseFloat()方法把字符串转换为浮点数
+    var b=parseFloat(str);
+<!--    要把任何值转换为布尔型数据，在值的前面增加两个 !! 感叹号即可，!!0 为 False，其余的均为 True-->
+</script>
+</body>
+</html>
