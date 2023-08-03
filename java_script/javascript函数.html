@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数</title>
+</head>
+<body>
+<p>点击下方按钮获得数据</p>
+<button onclick="data('zhangsan',19,190)">点击这里</button>
+<button onclick="alert('My name is zhangsan,age is 19,and height is 190')">直接打印？</button>
+
+
+<script>
+//您可以发送任意多的参数，由逗号 (,) 分隔。
+//变量和参数必须以一致的顺序出现。第一个变量就是第一个被传递的参数的给定的值
+function data(name,age,height){
+  alert("My name is " + name + ",age is " + age + ",and height is " + height);
+}
+
+
+</script>
+</body>
+</html>

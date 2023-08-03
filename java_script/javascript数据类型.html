@@ -5,6 +5,7 @@
     <title>数据类型</title>
 </head>
 <body>
+<p id="demo"></p>
 <script>
 /*
     JavaScript 数组---和python中的列表一样
@@ -19,8 +20,29 @@
 
     或者 (literal array):
     var cars=["Saab","Volvo","BMW"];
+    document.getElementById("demo").innerHTML = cars[0]
 */
 
+/*
+JavaScript 对象---和python中的字典一样
+对象由花括号分隔。在括号内部，对象的属性以名称和值对的形式 (name : value) 来定义。属性由逗号分隔：
+var person={firstname:"John", lastname:"Doe", id:5566};
+上面例子中的对象 (person) 有三个属性：firstname、lastname 以及 id。
+空格和折行无关紧要。声明可横跨多行：
+
+var person={
+firstname : "John",
+lastname  : "Doe",
+id        :  5566
+};
+
+对象属性有两种寻址方式：
+name=person.lastname;
+name=person["lastname"];
+
+*/
+
+/*
 <!--    利用 toString() 方法可以把数值转换为字符串。-->
     var a=100;
     var c=a.toString();
@@ -30,6 +52,7 @@
     var a=parseInt(str);    //parseInt()方法把字符串转换为整数，parseFloat()方法把字符串转换为浮点数
     var b=parseFloat(str);
 <!--    要把任何值转换为布尔型数据，在值的前面增加两个 !! 感叹号即可，!!0 为 False，其余的均为 True-->
+*/
 </script>
 </body>
 </html>
