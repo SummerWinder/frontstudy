@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>calculator</title><script src="calculator.js"></script>
+</head>
+
+<body>
+<!--方法一：-->
+<!--    <p>请输入第一个数字: <input id="first"></p>-->
+<!--    <p>请输入第二个数字: <input id="second"></p>-->
+<!--    <button onclick="add()">计算数值之和</button>-->
+<!--    <button onclick="subtract()">计算数值之差</button>-->
+<!--    <button onclick="multiply()">计算数值乘积</button>-->
+<!--    <button onclick="divide()">计算数值相除</button>-->
+<!--    <p id="result"></p>-->
+
+<!--方法二：(暂不可用，待调试)-->
+<p>简单计算器:</p>
+<table border="1" style="position:center;">
+  <tr>
+    <td>第一个数：</td>
+    <td><input type="text" id="first"/></td>
+  </tr>
+      <td colspan="2" >
+      &nbsp;
+      <button style="width:inherit" onclick="add()">+</button>
+      &nbsp;
+      <button style="width:inherit" onclick="subtract()">-</button>
+      &nbsp;
+      <button style="width:inherit" onclick="ride()">*</button>
+      &nbsp;
+      <button style="width:inherit" onclick="divide()">/</button>
+    </td>
+  <tr>
+    <td>第二个数：</td>
+    <td>
+      <input type="text" id="second"/>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" rowspan="2">
+      &nbsp;
+      <button style="width:inherit" onclick="sendResult()">=</button>
+      <p id="result"></p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
