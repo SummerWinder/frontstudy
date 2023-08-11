@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>for循环的使用练习</title>
+
+</head>
+
+<body>
+    <p id="test">这是一段文字</p>
+    <button onclick="OnClick()">按钮</button>
+</body>
+
+<script>
+function OnClick()
+{
+    for (var i=0;i<10;i++)
+    {
+        <!--只有在浏览器的弹框结束后才会改变文字的结果-->
+        modify=document.getElementById("test").innerHTML  = "重新修改过的文字是这个";
+        break;
+        alert("11111111");
+    }
+        for (var j=0;j<5;j++)
+        {
+            if (j<2)
+                {
+                alert("2222222");
+                }
+            else
+                {
+                alert(typeof modify)
+                }
+            continue;
+            alert(typeof null)
+        }
+}
+/*
+null 和 undefined 的值相等，但类型不等：
+
+typeof undefined             // undefined
+typeof null                  // object
+null === undefined           // false
+null == undefined            // true
+*/
+</script>
+
+</html>
+
+

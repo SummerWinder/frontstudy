@@ -63,8 +63,9 @@ var last_result;
 var type;
 //加法
 function add() {
-    var add_re = true
-    sendResult(add_re);
+    var add_re = 1;
+    document.body.style="color:#ff311f";
+    return add_re;
 }
 
 //减法
@@ -76,7 +77,7 @@ function subtract() {
 }
 
 //乘法
-function ride() {
+function ride() {l
     var a = getFirstNumber();
     var b = getTwiceNumber();
     var re = a * b;
@@ -95,10 +96,14 @@ function divide() {
 function sendResult(type) {
         var a = getFirstNumber();
         var b = getTwiceNumber();
-        var num = document.getElementById("result")
-    if (type == true){
-        var result =Number(a) +Number(b);}
-    num.innerHTML = result;
+        var num = document.getElementById("result");
+    if (type == 1){
+        var last_result = a + b;
+        }
+    else{
+        alert('111111')
+        }
+    num.innerHTML = last_result;
 }
 
 //获取第一位数字
