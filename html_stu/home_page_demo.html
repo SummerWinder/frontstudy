@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>自动测试平台首页</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu {
+      float: left;
+      width: 200px;
+      background-color: #f9f9f9;
+      padding: 10px;
+      border-radius: 4px;
+    }
+
+    .menu ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu li {
+      margin-bottom: 10px;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: #333;
+      display: block;
+      padding: 5px;
+      border-radius: 4px;
+      background-color: #42b983;
+      color: #fff;
+      text-align: center;
+    }
+
+    .content {
+      margin-left: 220px;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #42b983;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .test-box {
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .test-box-header {
+      background-color: #f9f9f9;
+      border-bottom: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 4px;
+    }
+
+    .test-box-content {
+      padding: 10px;
+    }
+
+    .test-button {
+      padding: 10px 20px;
+      background-color: #42b983;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .footer {
+      background-color: #f1f1f1;
+      padding: 20px;
+      text-align: center;
+      border-top: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="menu">
+      <ul>
+        <li><a href="#" id="test1">测试案例1</a></li> <!-- 给每个测试用例链接添加唯一的id -->
+        <li><a href="#" id="test2">测试案例2</a></li> <!-- 给每个测试用例链接添加唯一的id -->  <!-- 其他测试用例 -->  </ul> <script> // 给每个链接添加点击事件 for (var i = 0; i < menuLinks.length; i++) { menuLinks[i].addEventListener('click', function(e) { // 阻止链接的默认行为 e.preventDefault(); // 获取被点击的链接元素 var link = e.target; // 从链接元素中获取数据ID var dataId = link.getAttribute('data-id'); // 根据数据ID获取对应的数据并展示 var dataElement = document.getElementById(dataId); // 清空内容 dataElement.innerHTML = ''; // 从数据文件中获取对应的数据并展示 var data = '测试数据'; // 根据数据类型动态展示数据 dataElement.appendChild(document.createTextNode(data)); }); } </script> </div> <div class="content"> <h1 id="test1"></
