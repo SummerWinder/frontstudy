@@ -11,6 +11,10 @@
               return false;
           }
       }
+      document.getElementById("myButton").addEventListener("click", function(event) {
+        event.preventDefault(); // 阻止默认行为，如刷新页面
+        // 其他代码...
+       }
 </script>
 </head>
 <body>
@@ -19,14 +23,19 @@
   名字: <input type="text" name="fname">
   <input type="submit" value="提交">
   </form>
-
   <p>下面的输入框加入了required函数，浏览器会自动验证输入框为空</p>
 
+  <p>点击提交按钮，如果输入框是空的，浏览器会提示错误信息。</p>
   <form action="demo_form.php" method="post">
     <input type="text" name="fname" required="required">
     <input type="submit" value="提交">
   </form>
 
-  <p>点击提交按钮，如果输入框是空的，浏览器会提示错误信息。</p>
+  <p>form标签中如果有提交按钮，当点击该按钮时，表单会被提交，从而导致页面刷新。可以加入onsubmit，阻止默认刷新</p>
+  <form action="demo_form.php" method="post" onsubmit="event.preventDefault(); myFunction();">
+    <input type="text" name="fname" required="required">
+    <input type="submit" value="提交">
+  </form>
+
 </body>
 </html>

@@ -7,7 +7,9 @@
 <body>
 <p>点击下方按钮获得数据</p>
 <button onclick="data('zhangsan',19,190)">点击这里</button>
-<button onclick="alert('My name is zhangsan,age is 19,and height is 190')">直接打印？</button>
+<button onclick="alert('My name is zhangsan,age is 19,and height is 190')">直接弹出提示信息</button>
+<button onclick="people('lisi',29,100)">提示信息放在按钮的下方</button>
+<p id="infor"></p>
 
 
 <script>
@@ -17,6 +19,9 @@ function data(name,age,height){
   alert("My name is " + name + ",age is " + age + ",and height is " + height);
 }
 
+function people(name,age,height){
+  document.getElementById("infor").innerHTML = "My name is " + name + ",age is " + age + ",and height is " + height
+}
 </script>
 </body>
 </html>
