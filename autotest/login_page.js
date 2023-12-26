@@ -48,9 +48,11 @@ function isUserName() {
     username_input = document.getElementById("username_input").value;
     password_input = document.getElementById("password_input").value;
 
-    var rule = /^[a-zA-Z0-9_]{3,16}$/; /*定义验证表达式*/
-    var username_result = rule.test(username_input);
-    var password_result = rule.test(password_input);
+    var username_rule = /^[a-zA-Z0-9_]{3,16}$/; /*定义验证表达式*/
+    var password_rule = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[@$!%*?&_.])[A-Za-z\d@$!%*?&_.]{8,20}$/; /*定义验证表达式*/
+
+    var username_result = username_rule.test(username_input);
+    var password_result = password_rule.test(password_input);
 
     if (username_result === true){
         document.getElementById("check_username").innerHTML = '您输入的用户名是合法的';
@@ -63,10 +65,10 @@ function isUserName() {
         }
 
     if (password_result === true){
-        document.getElementById("check_password").innerHTML = '您输入的用户名是合法的';
+        document.getElementById("check_password").innerHTML = '您输入的密码是合法的';
         }
-    else if(result === false){
-        document.getElementById("check_username").innerHTML = '用户名只包含字母、数字和下划线，并且长度在3到16个字符之间';
+    else if (password_result === false){
+        document.getElementById("check_password").innerHTML = '密码至少包含一个字母、一个数字和一个特殊字符,并且长度在8到20个字符之间';
         }
     else{
         alert("密码合法判断有误，请检查")
