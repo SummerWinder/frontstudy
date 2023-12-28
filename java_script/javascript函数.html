@@ -11,8 +11,26 @@
 <button onclick="people('lisi',29,100)">提示信息放在按钮的下方</button>
 <p id="infor"></p>
 
+<button onclick="check_num('')">对于数字类型的判断</button>
+<p id="data"></p>
+
+<button onclick="arguments_test(1,2,3,4,8)">关键字arguments 的使用</button>
+<p id="data1"></p>
+<p id="data2"></p>
+
+<button onclick="rest_test(1,2,3)">关键字rest 的使用</button>
+<p id="rest_data1"></p>
+<p id="rest_data2"></p>
+<p id="rest_data3"></p>
+
+<button onclick="sum_rest()">将传入的所有参数求和</button>
+<p id="sum_data1"></p>
+
+<button onclick="area_of_circle(2,3.15)">计算圆的面积</button>
+<p id="circle_data"></p>
 
 <script>
+'use strict'
 //您可以发送任意多的参数，由逗号 (,) 分隔。
 //变量和参数必须以一致的顺序出现。第一个变量就是第一个被传递的参数的给定的值
 function data(name,age,height){
@@ -22,6 +40,62 @@ function data(name,age,height){
 function people(name,age,height){
   document.getElementById("infor").innerHTML = "My name is " + name + ",age is " + age + ",and height is " + height
 }
+
+
+function check_num(x) {
+    if (typeof x !== 'number') {
+        alert('Not a number');
+    }
+    if (x >= 0) {
+        document.getElementById("data").innerHTML = x;
+    } else {
+        document.getElementById("data").innerHTML = -x;
+    }
+}
+
+<!--JavaScript还有一个免费赠送的关键字arguments，它只在函数内部起作用，并且永远指向当前函数的调用者传入的所有参数。-->
+<!--利用arguments，你可以获得调用者传入的所有参数。也就是说，即使函数不定义任何参数，还是可以拿到参数的值：-->
+function arguments_test(x) {
+    document.getElementById("data1").innerHTML = 'x = ' + x;
+    var list=[]
+    for (var i=0; i<arguments.length; i++) {
+        list.push(arguments[i])
+    }
+    document.getElementById("data2").innerHTML = list;
+}
+
+<!--ES6标准引入了rest参数，rest参数只能写在最后，前面用...标识，从运行结果可知，传入的参数先绑定a、b，多余的参数以数组形式交给变量rest，-->
+<!--所以，不再需要arguments我们就获取了全部参数。-->
+<!--如果传入的参数连正常定义的参数都没填满，也不要紧，rest参数会接收一个空数组（注意不是undefined）。-->
+function rest_test(a,b,...rest) {
+    document.getElementById("rest_data1").innerHTML = 'a = ' + a;
+    document.getElementById("rest_data2").innerHTML = 'b = ' + b;
+    document.getElementById("rest_data3").innerHTML = '类型是：' + typeof (rest) + '，值是：' + rest;
+}
+
+function sum_rest(...rest) {
+    var sum=0
+    for (var i=0; i<rest.length; i++){
+        sum=sum+rest[i]
+    }
+    document.getElementById("sum_data1").innerHTML = sum;
+}
+
+function area_of_circle(r, pi) {
+<!--函数中的入参是不需要重新声明的！-->
+<!--    var r,pi=r,pi-->
+    var area=0
+    if (typeof pi !== 'number' || typeof r !== 'number' ) {
+        alert('Not a number');
+    }
+    else if (pi === 0 || isNaN(pi)){
+        pi=3.14
+    }
+    area = pi * r **2
+    document.getElementById("circle_data").innerHTML = area;
+}
+
+
 </script>
 </body>
 </html>
